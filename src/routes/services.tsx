@@ -19,6 +19,8 @@ function ServicesPage() {
   return (
     <HeroPage
       videoSrc="https://videos.pexels.com/video-files/6111780/6111780-uhd_2560_1440_25fps.mp4"
+      posterSrc="https://images.pexels.com/videos/6111780/free-video-6111780.jpg?auto=compress&cs=tinysrgb&w=1600"
+      variant="elbow"
       badge="Elbow & upper limb rehab"
       headline="Restore precision and strength to every reach, lift, and grip."
       subtext="From tennis elbow to post-surgical recovery — a tailored plan for your joints."

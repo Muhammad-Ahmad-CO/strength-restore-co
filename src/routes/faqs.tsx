@@ -19,6 +19,8 @@ function FaqsPage() {
   return (
     <HeroPage
       videoSrc="https://videos.pexels.com/video-files/4754030/4754030-uhd_2560_1440_25fps.mp4"
+      posterSrc="https://images.pexels.com/videos/4754030/free-video-4754030.jpg?auto=compress&cs=tinysrgb&w=1600"
+      variant="leg"
       badge="Leg & lower limb questions"
       headline="Walk, run, and stand without compromise — answers to your recovery."
       subtext="Common questions about knee, calf, and ankle rehab — answered with clarity."
