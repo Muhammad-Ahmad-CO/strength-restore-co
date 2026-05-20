@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 function Logo() {
   return (
@@ -19,8 +19,35 @@ const navLinks = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
+export type HeroVariant = "default" | "elbow" | "leg" | "neck" | "story";
+
+const variantClasses: Record<HeroVariant, { overlay: string; enter: string }> = {
+  default: {
+    overlay: "bg-gradient-to-tr from-black/30 via-transparent to-transparent",
+    enter: "animate-fade-in",
+  },
+  story: {
+    overlay: "bg-gradient-to-b from-black/10 via-transparent to-black/20",
+    enter: "animate-fade-in",
+  },
+  elbow: {
+    overlay: "bg-gradient-to-r from-black/40 via-transparent to-blue-900/20",
+    enter: "animate-slide-in-right",
+  },
+  leg: {
+    overlay: "bg-gradient-to-t from-black/40 via-transparent to-transparent",
+    enter: "animate-scale-in",
+  },
+  neck: {
+    overlay: "bg-gradient-to-bl from-blue-900/20 via-transparent to-black/30",
+    enter: "animate-fade-in",
+  },
+};
+
 export type HeroPageProps = {
   videoSrc: string;
+  posterSrc?: string;
+  variant?: HeroVariant;
   badge: string;
   badgeHref?: string;
   headline: ReactNode;
@@ -29,8 +56,22 @@ export type HeroPageProps = {
   ctaTo: string;
 };
 
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReduced(mql.matches);
+    update();
+    mql.addEventListener("change", update);
+    return () => mql.removeEventListener("change", update);
+  }, []);
+  return reduced;
+}
+
 export function HeroPage({
   videoSrc,
+  posterSrc,
+  variant = "default",
   badge,
   badgeHref = "/story",
   headline,
@@ -38,17 +79,63 @@ export function HeroPage({
   ctaLabel,
   ctaTo,
 }: HeroPageProps) {
+  const reducedMotion = usePrefersReducedMotion();
+  const [loaded, setLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const v = variantClasses[variant];
+
+  useEffect(() => {
+    setLoaded(false);
+    const el = videoRef.current;
+    if (!el) return;
+    if (reducedMotion) {
+      el.pause();
+    } else {
+      el.play().catch(() => {});
+    }
+  }, [videoSrc, reducedMotion]);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#f0f0ee]">
-      <video
-        key={videoSrc}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={videoSrc}
-      />
+      {/* Poster / loading fallback */}
+      <div
+        aria-hidden="true"
+        className={`absolute inset-0 transition-opacity duration-700 ${loaded && !reducedMotion ? "opacity-0" : "opacity-100"}`}
+        style={
+          posterSrc
+            ? {
+                backgroundImage: `url(${posterSrc})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }
+            : { background: "linear-gradient(135deg,#e7eaf0,#f0f0ee 60%,#dbe4ee)" }
+        }
+      >
+        {!posterSrc && !loaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="h-8 w-8 rounded-full border-2 border-blue-400/40 border-t-blue-500 animate-spin" />
+          </div>
+        )}
+      </div>
+
+      {!reducedMotion && (
+        <video
+          ref={videoRef}
+          key={videoSrc}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${loaded ? "opacity-100" : "opacity-0"}`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={posterSrc}
+          src={videoSrc}
+          onLoadedData={() => setLoaded(true)}
+          onCanPlay={() => setLoaded(true)}
+        />
+      )}
+
+      <div className={`absolute inset-0 pointer-events-none ${v.overlay}`} aria-hidden="true" />
 
       <div className="relative z-10 flex flex-col min-h-screen">
         <nav className="flex items-center justify-center pt-4 sm:pt-6 px-4 sm:px-8 gap-2 sm:gap-3">
@@ -78,7 +165,7 @@ export function HeroPage({
         </nav>
 
         <div className="flex-1 flex items-end pb-10 sm:pb-16 lg:pb-20 px-6 sm:px-12 md:px-20 lg:px-28">
-          <div className="max-w-xs animate-fade-in">
+          <div className={`max-w-xs ${reducedMotion ? "" : v.enter}`}>
             <Link
               to={badgeHref}
               className="inline-flex items-center gap-1.5 text-[11.5px] font-medium text-blue-500 hover:text-blue-600 transition-colors mb-3 group"
