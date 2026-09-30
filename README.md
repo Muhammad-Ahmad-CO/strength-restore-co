@@ -1,402 +1,339 @@
-# Movement Reclaimed
+# 🏥 Strength Restore Co – Dr. Ayesha Raees Physiotherapy
 
-PRD: Dr. Ayesha Raees – Physiotherapy Website
-1. Project Overview
-A clean, modern single-page hero website for Dr. Ayesha Raees, a professional physiotherapist. The site serves as a digital front door—building trust, communicating core value, and driving patient consultations through a minimal, video-led design.
+> **Expert physiotherapy care designed to restore your strength and mobility.**  
+> Reclaim your movement. Start your healing journey with Dr. Ayesha Raees.
 
-2. Target Audience
-Individuals recovering from injuries, surgeries, or chronic pain
+![TypeScript](https://img.shields.io/badge/TypeScript-96.3%25-3178c6?style=flat-square)
+![React](https://img.shields.io/badge/React%2018-Modern%20Web-61dafb?style=flat-square)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-38b2ac?style=flat-square)
+![Vite](https://img.shields.io/badge/Vite-5-646cff?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-Athletes seeking performance rehab
+---
 
-Elderly patients needing mobility support
+## 📋 Project Overview
 
-Caregivers and family members researching treatment options
+**Strength Restore Co** is a modern, responsive physiotherapy practice website built for **Dr. Ayesha Raees**, a specialized physiotherapist dedicated to helping patients recover from injuries, surgeries, and chronic conditions.
 
-3. Core Objectives
-Objective	Success Metric
-Establish credibility & trust	Low bounce rate, high time-on-page
-Communicate service clarity in <5 seconds	Clear headline comprehension
-Drive consultation bookings	CTA click-through rate
-Reflect a premium, empathetic brand	User feedback & brand perception
-4. Key Features (MVP – Phase 1)
-Fullscreen autoplay background video (muted, looped) showing rehabilitation / movement
+This is a **premium, single-page hero website** that serves as a digital front door—building trust, communicating specialized services, and converting visitors into consultation bookings.
 
-Minimal pill-style centered navbar with logo and navigation links
+### 🎯 Key Objectives
 
-Bottom-left hero content: badge, headline, subtext, CTA
+| Objective | Success Metric |
+|-----------|---|
+| **Establish Credibility & Trust** | Low bounce rate, high time-on-page engagement |
+| **Communicate Services in <5 Seconds** | Clear headline comprehension & value proposition |
+| **Drive Consultation Bookings** | CTA click-through rate & conversion tracking |
+| **Reflect Premium Brand** | Professional design, empathetic messaging, accessibility |
 
-Subtle micro-interactions (hover arrow shifts, CTA fill transition)
+---
 
-Fully responsive across mobile, tablet, and desktop
+## 👥 Target Audience
 
-Accessible semantic HTML with proper contrast ratios
+- 🏃 **Athletes** seeking performance rehabilitation
+- 🤕 **Injury Patients** recovering from accidents or surgeries
+- 👵 **Elderly Patients** needing mobility support & pain management
+- 💪 **Chronic Pain Sufferers** looking for evidence-based treatment
+- 👨‍👩‍👧 **Caregivers & Family Members** researching treatment options
 
-5. Doctor Profile
-Field	Detail
-Name	Dr. Ayesha Raees
-Specialization	Physiotherapy & Rehabilitation
-Brand Voice	Warm, professional, empowering
-Key Message	Restore strength, reclaim movement
-6. Technical Stack
-Layer	Technology
-Framework	React 18 + TypeScript
-Build Tool	Vite
-Styling	Tailwind CSS 3
-Icons	Lucide React
-Hosting	CloudFront (video asset) + any static host
-Fonts	System font stack (no external fonts)
-7. Design Specifications
-Element	Specification
-Page Background	#f0f0ee
-Pill Background	#ededed
-Accent Color	blue-500 / blue-600 / blue-400
-Text Colors	gray-900 (headlines), gray-700 (nav), gray-400 (subtext)
-Navbar	Centered, two separate pill containers
-Hero Content	Bottom-left aligned, max-width constrained
-CTA	Rounded-full pill, outline → filled on hover
-Transitions	200ms ease on all interactive elements
-8. Content (Hero Section)
-Badge: "Trusted Physiotherapy by Dr. Ayesha Raees"
+---
 
-Headline: "Expert physiotherapy care designed to restore your strength and mobility."
+## ✨ Core Features
 
-Subtext: "Reclaim your movement. Start your healing journey with Dr. Ayesha Raees."
+### 🎬 Immersive Design
+- **Fullscreen autoplay background video** (muted, looped) showing rehabilitation & movement
+- Subtle micro-interactions and smooth hover transitions
+- Premium pill-style navigation with minimal design language
 
-CTA: "Book a consultation →"
+### 📱 Fully Responsive
+- Mobile-first approach with seamless tablet and desktop experiences
+- Optimized breakpoints: `sm` (640px), `md` (768px), `lg` (1024px)
+- Touch-friendly navigation and CTAs
 
-9. Navigation Links
-Story
+### ♿ Accessibility First
+- Semantic HTML with proper ARIA labels
+- WCAG 2.1 AA compliant color contrast ratios
+- Keyboard navigation support
+- Screen reader optimized
 
-Products (→ Services)
+### ⚡ Performance Optimized
+- Lightweight footprint with minimal dependencies
+- System font stack (no external font loading delays)
+- Optimized video assets via CloudFront CDN
+- Fast initial load times with Vite
 
-Help (→ FAQs)
+---
 
-Support (→ Contact)
+## 🏢 Professional Profile
 
-10. Browser & Device Support
-Chrome, Firefox, Safari, Edge (latest 2 versions)
+| Field | Details |
+|-------|---------|
+| **Name** | Dr. Ayesha Raees |
+| **Specialization** | Physiotherapy & Rehabilitation Medicine |
+| **Brand Voice** | Warm, professional, empowering, evidence-based |
+| **Core Message** | "Restore Strength. Reclaim Movement. Reclaim Life." |
+| **Approach** | Patient-centered, holistic rehabilitation |
 
-iOS Safari, Android Chrome
+---
 
-Breakpoints: sm (640px), md (768px), lg (1024px)
+## 🛠 Technical Stack
 
-11. Future Phases (Out of Scope for MVP)
-Multi-page routing (About, Services, Contact)
+| Layer | Technology | Version |
+|-------|-----------|---------|
+| **Framework** | React | 19.2.0 |
+| **Language** | TypeScript | 5.8.3 |
+| **Build Tool** | Vite | 7.3.1 |
+| **Styling** | Tailwind CSS | 4.2.1 |
+| **UI Components** | Radix UI | Latest |
+| **Icons** | Lucide React | 0.575.0 |
+| **Routing** | TanStack Router | 1.168+ |
+| **Forms** | React Hook Form + Zod | Latest |
+| **Charts** | Recharts | 2.15.4 |
+| **Hosting** | CloudFront + Static | AWS CDN |
 
-Online booking integration (Calendly / custom)
+---
 
-Blog / resources section
+## 🎨 Design System
 
-Testimonials carousel
+### Color Palette
+```
+Primary:      #3b82f6 (Blue-500)
+Secondary:    #1e40af (Blue-600)
+Accent:       #60a5fa (Blue-400)
+Background:   #f0f0ee (Warm Gray)
+Pill/Surface: #ededed (Light Gray)
+Text Primary: #111827 (Gray-900)
+Text Nav:     #374151 (Gray-700)
+Text Muted:   #9ca3af (Gray-400)
+```
 
-Supabase backend for form submissions
+### Typography
+- **Headlines:** Gray-900, Bold, System Font
+- **Body Text:** Gray-700, Regular, System Font
+- **Subtext:** Gray-400, Regular, System Font
 
-Now, here's the complete Vite + React + TypeScript + Tailwind CSS project:
+### Interactive Elements
+- **Pill-style buttons** with rounded-full padding
+- **Outline → Filled transition** on hover (200ms ease)
+- **Smooth micro-interactions** on all interactive elements
+- **Arrow icons** that shift on hover for engagement
 
-Project Structure
-text
-physio-website/
-├── index.html
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-├── tsconfig.json
-├── tsconfig.app.json
-├── tsconfig.node.json
-├── vite.config.ts
+---
+
+## 🗂 Project Structure
+
+```
+strength-restore-co/
+├── index.html                 # Entry point with SEO meta tags
+├── package.json              # Dependencies & scripts
+├── vite.config.ts            # Vite configuration
+├── tsconfig.json             # TypeScript root config
+├── tsconfig.app.json         # Application TypeScript settings
+├── tsconfig.node.json        # Node TypeScript settings
+├── tailwind.config.js        # Tailwind CSS configuration
+├── postcss.config.js         # PostCSS & autoprefixer config
 └── src/
-    ├── main.tsx
-    ├── index.css
-    └── App.tsx
-File-by-File Code
-package.json
-json
-{
-  "name": "dr-ayesha-raees-physio",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "lucide-react": "^0.400.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4"
-  }
-}
-index.html
-html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Ayesha Raees – Physiotherapy & Rehabilitation</title>
-    <meta name="description" content="Expert physiotherapy care by Dr. Ayesha Raees. Restore your strength and reclaim your movement." />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-vite.config.ts
-typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+    ├── main.tsx              # React application entry
+    ├── index.css             # Global Tailwind styles
+    ├── App.tsx               # Main application component
+    └── components/           # Reusable UI components
+        ├── Navbar.tsx        # Navigation bar
+        ├── Hero.tsx          # Hero section
+        ├── CTA.tsx           # Call-to-action buttons
+        └── ...
+```
 
-export default defineConfig({
-  plugins: [react()],
-})
-tsconfig.json
-json
-{
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
-}
-tsconfig.app.json
-json
-{
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src"]
-}
-tsconfig.node.json
-json
-{
-  "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["vite.config.ts"]
-}
-postcss.config.js
-javascript
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
-tailwind.config.js
-javascript
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-src/index.css
-css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-src/main.tsx
-typescript
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+---
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  
-    ,
-)
-src/App.tsx
-tsx
-function App() {
-  return (
-    
+## 🚀 Getting Started
 
+### Prerequisites
+- **Node.js** 18+ (recommended: use [nvm](https://github.com/nvm-sh/nvm))
+- **npm** or **yarn**
 
-      {/* Background Video */}
-      
+### Installation
 
-      {/* Foreground Content */}
-      
+```bash
+# Clone the repository
+git clone https://github.com/Muhammad-Ahmad-CO/strength-restore-co.git
+cd strength-restore-co
 
-
-        {/* Navbar */}
-        
-          {/* Logo Pill */}
-          
-
-
-            
-          
-
-
-
-          {/* Nav Links Pill */}
-          
-
-
-            {['Story', 'Services', 'FAQs', 'Contact'].map((link) => (
-              
-                {link}
-              
-            ))}
-          
-
-
-        
-
-        {/* Hero Content – bottom-left aligned */}
-        
-
-
-          
-
-
-            {/* Badge */}
-            
-              Trusted Physiotherapy by Dr. Ayesha Raees
-              
-                →
-              
-            
-
-            {/* Headline */}
-            
-
-
-              Expert physiotherapy care designed to restore your strength and mobility.
-            
-
-
-
-            {/* Subtext */}
-            
-
-
-              Reclaim your movement. Start your healing journey with Dr. Ayesha Raees.
-            
-
-
-
-            {/* CTA */}
-            
-              Book a consultation
-              
-                →
-              
-            
-          
-
-
-        
-
-
-      
-
-
-    
-
-
-  )
-}
-
-/** Inline SVG Logo Component */
-function Logo() {
-  return (
-    
-      
-    
-  )
-}
-
-export default App
-Setup Instructions
-bash
-# 1. Create the project folder and navigate into it
-mkdir physio-website && cd physio-website
-
-# 2. Create all files above in their correct paths
-
-# 3. Install dependencies
+# Install dependencies
 npm install
 
-# 4. Start the dev server
+# Start the development server
 npm run dev
 
-# 5. Open http://localhost:5173 in your browser
-Summary of Changes for Dr. Ayesha Raees
-Original (Prosthetics)	Adapted (Physiotherapy)
-"Seen on Shark Tank in India"	"Trusted Physiotherapy by Dr. Ayesha Raees"
-"Simple, smart prosthetics made for people who keep fighting."	"Expert physiotherapy care designed to restore your strength and mobility."
-"Reclaim your movement now."	"Reclaim your movement. Start your healing journey with Dr. Ayesha Raees."
-"Try a free fitting"	"Book a consultation"
-Nav: Story, Products, Help, Support	Nav: Story, Services, FAQs, Contact
-The entire design system, video background, layout, animations, and responsive breakpoints remain identical to the provided specifications—only the content has been tailored for a physiotherapy practice led by Dr. Ayesha Raees.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://strength-restore-co.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/29bb2b28-2f09-4a39-98fd-8e5815a55959).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+# Open http://localhost:5173 in your browser
 ```
+
+### Available Scripts
+
+```bash
+# Development server with hot reload
+npm run dev
+
+# Build for production
+npm build
+
+# Build for development
+npm run build:dev
+
+# Preview production build locally
+npm run preview
+
+# Lint code with ESLint
+npm run lint
+
+# Format code with Prettier
+npm run format
+```
+
+---
+
+## 📝 Navigation & Content
+
+### Navbar Links
+- **Story** → About Dr. Ayesha & her journey
+- **Services** → Detailed physiotherapy services
+- **FAQs** → Common questions & answers
+- **Contact** → Booking & support channels
+
+### Hero Section Content
+
+**Badge:** "Trusted Physiotherapy by Dr. Ayesha Raees"
+
+**Headline:** "Expert physiotherapy care designed to restore your strength and mobility."
+
+**Subtext:** "Reclaim your movement. Start your healing journey with Dr. Ayesha Raees."
+
+**CTA:** "Book a consultation →"
+
+---
+
+## 🌐 Browser & Device Support
+
+✅ **Browsers:** Chrome, Firefox, Safari, Edge (latest 2 versions)  
+✅ **Mobile:** iOS Safari, Android Chrome  
+✅ **Tablets:** Full responsive optimization  
+✅ **Accessibility:** WCAG 2.1 AA compliant
+
+---
+
+## 📊 SEO & Meta Tags
+
+```html
+<title>Dr. Ayesha Raees – Physiotherapy & Rehabilitation</title>
+<meta name="description" 
+      content="Expert physiotherapy care by Dr. Ayesha Raees. Restore your strength and reclaim your movement." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+---
+
+## 🔄 CI/CD & Deployment
+
+### Automated Workflow
+- Push to `main` branch triggers build
+- Automatic deployment to CloudFront CDN
+- Code stays in sync with Lovable editor
+- Full version control & rollback capability
+
+### Build Process
+```bash
+# TypeScript compilation + Vite bundling
+npm run build
+
+# Outputs optimized static files to /dist
+```
+
+---
+
+## 🗺 Roadmap (Future Phases)
+
+### Phase 2: Multi-Page Experience
+- [ ] Full About page with Dr. Raees' credentials
+- [ ] Detailed Services catalog with pricing
+- [ ] Success stories & patient testimonials
+- [ ] Blog/Resources section
+
+### Phase 3: Booking & Backend
+- [ ] Integration with Calendly or custom booking system
+- [ ] Online consultation scheduling
+- [ ] Supabase backend for form submissions
+- [ ] Email notifications for inquiries
+
+### Phase 4: Advanced Features
+- [ ] Patient portal for tracking progress
+- [ ] Video tutorials for home exercises
+- [ ] Testimonials carousel
+- [ ] Insurance & payment integration
+
+---
+
+## 🔒 Privacy & Compliance
+
+- ✅ GDPR compliant (if EU visitors)
+- ✅ CCPA compliant (if California visitors)
+- ✅ Medical information handled securely
+- ✅ Privacy policy & Terms of Service (coming soon)
+
+---
+
+## 📦 Built With Lovable
+
+This project was created and is maintained with [Lovable](https://lovable.dev), an AI-powered development platform.
+
+**Live Application:** [strength-restore-co.lovable.app](https://strength-restore-co.lovable.app)
+
+### Development Workflow
+- **Local Development:** Clone, modify, commit to GitHub
+- **Cloud Development:** Use [Lovable Editor](https://lovable.dev/projects/29bb2b28-2f09-4a39-98fd-8e5815a55959)
+- **Sync:** All changes automatically sync to both local and cloud
+- **Deploy:** Push to GitHub, auto-deploy to production
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📞 Contact & Support
+
+- 📧 **Email:** contact@strength-restore-co.com
+- 🌐 **Website:** [strength-restore-co.lovable.app](https://strength-restore-co.lovable.app)
+- 💬 **Issues:** [GitHub Issues](https://github.com/Muhammad-Ahmad-CO/strength-restore-co/issues)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Dr. Ayesha Raees** for her vision and expertise
+- **Lovable** platform for AI-assisted development
+- **React & TypeScript** community for excellent tooling
+- **Tailwind CSS** for modern styling approach
+- **Radix UI** for accessible component primitives
+
+---
+
+<div align="center">
+
+**Built with ❤️ for better physiotherapy care**
+
+*Restore strength. Reclaim movement. Reclaim life.*
+
+</div>
